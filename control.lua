@@ -104,6 +104,15 @@ local function onPlayerJoinedGame(pid)
 		log("CBC: Evolution settings pre-patch")
 		log("CBC: time: " .. game.forces["enemy"].evolution_factor_by_time .. " | pollution: " .. game.forces["enemy"].evolution_factor_by_pollution .. " | killing_spawners: " .. game.forces["enemy"].evolution_factor_by_killing_spawners)
 		
+		
+		-- Just check here if this mod is being loaded onto a new save, if it is do not apply evo, but instead capture it
+		if ( global.settings.evolution_factor_by_time == nil or global.settings.evolution_factor_by_pollution == nil or global.settings.evolution_factor_by_killing_spawners == nil ) then
+			log("CBC: Detected that this save has not seen CBC before, grabbing snapshot of evolution state")
+			global.settings.evolution_factor_by_time = game.forces["enemy"].evolution_factor_by_time
+			global.settings.evolution_factor_by_pollution = game.forces["enemy"].evolution_factor_by_pollution
+			global.settings.evolution_factor_by_killing_spawners = game.forces["enemy"].evolution_factor_by_killing_spawners
+		end
+		
 		game.forces["enemy"].evolution_factor_by_time = global.settings.evolution_factor_by_time
 		game.forces["enemy"].evolution_factor_by_pollution = global.settings.evolution_factor_by_pollution
 		game.forces["enemy"].evolution_factor_by_killing_spawners = global.settings.evolution_factor_by_killing_spawners
