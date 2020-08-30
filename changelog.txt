@@ -1,0 +1,21 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 2020-08-30
+  Features:
+  - Updated version requirements to 1.0
+  - CBC now saves the evolution factor and restores it when biter states are restored
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 2020-01-25
+  Features:
+  - Now supported on 0.18
+---------------------------------------------------------------------------------------------------
+Version: 0.0.2
+Date: 2020-01-12
+  Bugfixes:
+  - Fixed that Forcing Biter AI to be disabled would crash the server.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.1
+Date: 2020-01-11
+  Features:
+  - Initial release
