@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 2020-12-10
+  Changes:
+    - [+] Now supports Factorio v1.1
+---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 2020-08-30
   Bugfixes: Fixed that the mod would crash when attempted to be loaded onto an existing save (oops)
